@@ -8,8 +8,8 @@ const fs = require('fs'),
 const request = BPromise.promisifyAll(require('request'));
 
 const options = commandLineArgs([
-    { name: 'image', alias: 'i', type: String, defaultValue: './vivaldi.jpg' },
-    { name: 'type', alias: 't', type: String, defaultValue: 'LABEL_DETECTION' },
+    { name: 'image', alias: 'i', type: String, defaultValue: './callas.jpg' },
+    { name: 'type', alias: 't', type: String, defaultValue: 'LOGO_DETECTION' },
     { name: 'limit', alias: 'l', type: Number, defaultValue: 1 },
     { name: 'stdin', alias: 's', defaultOption: false}
   ]).parse();
