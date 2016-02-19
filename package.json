@@ -1,0 +1,17 @@
+{
+  "name": "classical-packshot-scanner",
+  "version": "1.0.0",
+  "description": "A quick hack of the google vision api to allow multiple images",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js vivaldi.jpg TEXT_DETECTION 10"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "base64-js": "^1.0.4",
+    "bluebird": "^3.3.1",
+    "command-line-args": "^2.1.6",
+    "request": "^2.69.0"
+  }
+}
