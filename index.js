@@ -10,12 +10,13 @@ const request = BPromise.promisifyAll(require('request'));
 const options = commandLineArgs([
     { name: 'image', alias: 'i', type: String, defaultValue: './vivaldi.jpg' },
     { name: 'type', alias: 't', type: String, defaultValue: 'LABEL_DETECTION' },
-    { name: 'limit', alias: 'l', type: Number, defaultValue: 1 }
+    { name: 'limit', alias: 'l', type: Number, defaultValue: 1 },
+    { name: 'stdin', alias: 's', defaultOption: false}
   ]).parse();
 
 console.log(options);
 
-const image = fs.readFileSync(options.image);
+var image = getImageStream(options);
 const payload = {
   requests: [
     {
@@ -29,6 +30,13 @@ const payload = {
     }
   ]
 };
+
+function getImageStream(options) {
+  if (options.stdin === true) {
+    return fs.readFileSync('/dev/stdin');
+  }
+  return fs.readFileSync(options.image);
+}
 
 const url = 'https://vision.googleapis.com/v1/images:annotate?key=' + process.env.GOOGLE_API_KEY;
 
