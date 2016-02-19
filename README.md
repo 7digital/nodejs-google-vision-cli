@@ -1,6 +1,6 @@
 # Google Vision cli tool
 
-A quick and basic wrapper around the google vision http api
+A quick and basic wrapper around the [google cloud vision http api](https://cloud.google.com/vision/reference/rest/v1/images/annotate)
 
 ### env var
 
