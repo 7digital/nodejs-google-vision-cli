@@ -4,7 +4,7 @@
   "description": "A quick hack of the google vision api to allow multiple images",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js vivaldi.jpg TEXT_DETECTION 10"
+    "test": "node index.js"
   },
   "author": "",
   "license": "ISC",

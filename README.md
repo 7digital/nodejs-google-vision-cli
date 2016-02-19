@@ -9,6 +9,8 @@ I have one if anyone needs it, the google vision needs billing to be set up befo
 
 ### instructions
 
+`npm install`
+
 Takes an image, base64 encodes it and sends it to the google vision api for checking
 
 Accepts the following params:
@@ -45,6 +47,8 @@ Will return the following:
             y: 27
 
 ```
+
+You can also use `make run` with `IMAGE` `TYPE` or `LIMIT` params, to run it in docker
 
 It uses `prettyjson` for a nice colourful yml version of the response
 
